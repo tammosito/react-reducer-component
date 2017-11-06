@@ -1,8 +1,7 @@
 {
 	"name": "react-reducer-component",
-	"version": "0.0.1",
-	"description":
-		"Implementation of the Reducer-Component pattern using RenderProps",
+	"version": "0.0.2",
+	"description": "Implementation of the Reducer-Component pattern using RenderProps",
 	"main": "dist/index.js",
 	"author": "Tammo Boehme <tammo@tzi.de>",
 	"license": "MIT",
@@ -10,13 +9,20 @@
 		"type": "git",
 		"url": "git+https://github.com/tiammosito/react-reducer-component.git"
 	},
-	"keywords": ["react", "react-component", "reducer-component", "reducer"],
+	"keywords": [
+		"react",
+		"react-component",
+		"reducer-component",
+		"reducer"
+	],
 	"scripts": {
 		"clean": "rm -rf dist",
 		"build": "babel src --out-dir dist",
 		"prepublish": "NODE_ENV=production; babel src --out-dir dist"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
 		"babel-plugin-transform-class-properties": "^6.24.1",
