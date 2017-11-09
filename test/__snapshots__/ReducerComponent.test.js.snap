@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render without errors 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    0
+  </button>
+</div>
+`;
+
+exports[`Should reduce state properly 1`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    0
+  </button>
+</div>
+`;
+
+exports[`Should reduce state properly 2`] = `
+<div>
+  <button
+    onClick={[Function]}
+  >
+    1
+  </button>
+</div>
+`;
