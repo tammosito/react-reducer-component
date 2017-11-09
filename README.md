@@ -1,7 +1,7 @@
 react-reducer-component
 =======================
-Implementation of the Reducer-Component pattern using RenderProps.
 [![npm](https://img.shields.io/npm/v/react-reducer-component.svg)](https://npm.im/react-reducer-component)
+Implementation of the Reducer-Component pattern using RenderProps.
 
 ## Installation
 Add react-reducer-component to your project.
@@ -62,3 +62,5 @@ const CustomCounter = ({ reduce, count }) => (
   <button onClick={() => reduce(incCounter())}>{count}</button>
 );
 ```
+## Full example
+You can see a full example in `example/`
