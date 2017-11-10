@@ -1,5 +1,7 @@
 react-reducer-component
 =======================
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/tiammosito/react-reducer-component.svg)](https://greenkeeper.io/)
 [![npm](https://img.shields.io/npm/v/react-reducer-component.svg)](https://npm.im/react-reducer-component)
 Implementation of the Reducer-Component pattern using RenderProps.
 
