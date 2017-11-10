@@ -1,8 +1,10 @@
 react-reducer-component
 =======================
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/tiammosito/react-reducer-component.svg)](https://greenkeeper.io/)
 [![npm](https://img.shields.io/npm/v/react-reducer-component.svg)](https://npm.im/react-reducer-component)
+[![CircleCI](https://circleci.com/gh/tiammosito/react-reducer-component/tree/master.svg?style=shield)](https://circleci.com/gh/tiammosito/react-reducer-component/tree/master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/tiammosito/react-reducer-component.svg)](https://greenkeeper.io/)
+
 Implementation of the Reducer-Component pattern using RenderProps.
 
 ## Installation
