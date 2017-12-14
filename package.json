@@ -1,6 +1,6 @@
 {
 	"name": "react-reducer-component",
-	"version": "0.0.5",
+	"version": "0.1.0",
 	"description": "Implementation of the Reducer-Component pattern using RenderProps",
 	"main": "dist/index.js",
 	"author": "Tammo Boehme <tammo@tzi.de>",
