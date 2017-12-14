@@ -8,11 +8,11 @@ export default class ReducerProvider extends React.Component {
 	}
 
 	reduce = action => {
-		const newState = this.reducer(this.state, action);
-		this.setState(newState);
+		const nextState = this.reducer(this.state, action);
+		this.setState(nextState);
 	};
 
 	render() {
-		return <div>{this.props.children(this.reduce, this.state)}</div>;
+		return <div>{this.props.render(this.reduce, this.state)}</div>;
 	}
 }

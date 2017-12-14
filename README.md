@@ -1,11 +1,12 @@
 react-reducer-component
 =======================
+_A tiny state management library using render props for react_
 
 [![npm](https://img.shields.io/npm/v/react-reducer-component.svg)](https://npm.im/react-reducer-component)
 [![CircleCI](https://circleci.com/gh/tiammosito/react-reducer-component/tree/master.svg?style=shield)](https://circleci.com/gh/tiammosito/react-reducer-component/tree/master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/tiammosito/react-reducer-component.svg)](https://greenkeeper.io/)
 
-Implementation of the Reducer-Component pattern using RenderProps.
+This is a implementation of the Reducer-Component pattern using render props.
 
 ## Installation
 Add react-reducer-component to your project.
@@ -23,15 +24,16 @@ import ReducerProvider from "react-reducer-component";
 ```
 Wrap your components in a ReducerProvider
 ```jsx
-<ReducerProvider initialState={initialState} reducer={reducer}>
-	{(reduce, props) => {
+<ReducerProvider
+  initialState={initialState}
+  reducer={reducer}
+  render={(reduce, props) => {
 		return (
 			<div>
 				<CustomCounter reduce={reduce} count={props.count} />
 			</div>
 		);
-	}}
-</ReducerProvider>
+	}}/>
 ```
 
 Define your `initialState`, `reducer` und `actions` redux-style like so:

@@ -24,9 +24,15 @@ const initialState = {
 
 test("Render without errors", () => {
 	const component = renderer.create(
-		<ReducerProvider initialState={initialState} reducer={reducer}>
-			{(reduce, props) => <button onClick={() => reduce(incCounter())}>{props.count}</button>}
-		</ReducerProvider>
+		<ReducerProvider
+			initialState={initialState}
+			reducer={reducer}
+			render={(reduce, props) => (
+				<button onClick={() => reduce(incCounter())}>
+					{props.count}
+				</button>
+			)}
+		/>
 	);
 
 	let tree = component.toJSON();
@@ -35,18 +41,22 @@ test("Render without errors", () => {
 
 test("Should reduce state properly", () => {
 	const component = renderer.create(
-		<ReducerProvider initialState={initialState} reducer={reducer}>
-			{(reduce, props) => <button onClick={() => reduce(incCounter())}>{props.count}</button>}
-		</ReducerProvider>
+		<ReducerProvider
+			initialState={initialState}
+			reducer={reducer}
+			render={(reduce, props) => (
+				<button onClick={() => reduce(incCounter())}>
+					{props.count}
+				</button>
+			)}
+		/>
 	);
 
-	
 	let tree = component.toJSON();
 	expect(tree).toMatchSnapshot();
 	// trigger reduce to update state
-	tree.children[0].props.onClick()
-	
+	tree.children[0].props.onClick();
+
 	tree = component.toJSON();
 	expect(tree).toMatchSnapshot();
-
 });
