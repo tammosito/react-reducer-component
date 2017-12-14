@@ -22,18 +22,13 @@ Import react-reducer-component
 ```js
 import ReducerProvider from "react-reducer-component";
 ```
-Wrap your components in a ReducerProvider
+Define a `render` prop and put your components in it. The first paramter is a function to update your app state via `actions`. The second parameter contains the app state, which you can pass as props to your components.
 ```jsx
 <ReducerProvider
   initialState={initialState}
   reducer={reducer}
-  render={(reduce, props) => {
-		return (
-			<div>
-				<CustomCounter reduce={reduce} count={props.count} />
-			</div>
-		);
-	}}/>
+  render={(reduce, props) => (<MyCustomCounter reduce={reduce} count={props.count} />)}
+/>
 ```
 
 Define your `initialState`, `reducer` und `actions` redux-style like so:
@@ -43,7 +38,7 @@ const initialState = {
   count: 0
 };
 
-
+// current state and an action in, updated state out
 const reducer = (state = {}, action) => {
   if (action.type === INC_COUNTER) {
     return {
@@ -64,7 +59,7 @@ const incCounter = () => {
 
 Use the provided `reduce()` function to update your state:
 ```jsx
-const CustomCounter = ({ reduce, count }) => (
+const MyCustomCounter = ({ reduce, count }) => (
   <button onClick={() => reduce(incCounter())}>{count}</button>
 );
 ```
