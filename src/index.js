@@ -1,6 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
+import PropTypes from 'prop-types';
 
-export default class ReducerProvider extends React.Component {
+export default class ReducerProvider extends Component {
+	static propTypes = {
+		initialState: PropTypes.any.isRequired,
+		reducer: PropTypes.func.isRequired,
+		render: PropTypes.func.isRequired
+
+	}
+
 	constructor(props) {
 		super(props);
 		this.state = this.props.initialState;
