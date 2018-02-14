@@ -53,7 +53,6 @@ test("Should reduce state properly", () => {
 	);
 
 	let tree = component.toJSON();
-	expect(tree).toMatchSnapshot();
 	// trigger reduce to update state
 	tree.children[0].props.onClick();
 
